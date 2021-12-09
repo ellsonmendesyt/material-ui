@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Demo from './components/Demo';
 import Create from './pages/Create';
 
 
@@ -12,9 +13,10 @@ function App() {
   return (
     <React.Fragment>
     <Routes>
-      <Route path='/' element={<Notes/>} />
-      <Route path='/create' element={<Create/>} />
+      <Route path='/' element={<Create/>} />
+      <Route path='/create' element={<Notes/>} />
     </Routes>
+    {/* <Demo/> */}
     </React.Fragment>
   );
 }
