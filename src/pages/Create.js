@@ -1,7 +1,8 @@
 import { Button, Container, Typography } from '@mui/material'
 import React from 'react'
 
-
+import SendIcon from '@mui/icons-material/Send';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 const Create = () => {
     return (
         <Container>
@@ -16,7 +17,9 @@ const Create = () => {
             </Typography>
 
 
-            <Button color='secondary' variant='contained'   type='submit'>Criar</Button>
+            <Button color='secondary' variant='contained'  endIcon={<KeyboardArrowRightIcon />} type='submit'>
+                Criar
+            </Button>
         </Container>
     )
 }
