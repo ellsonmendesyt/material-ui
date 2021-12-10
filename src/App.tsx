@@ -1,21 +1,31 @@
 import React from 'react';
 import Home from './pages/Home';
-import {createMuiTheme,ThemeProvider} from '@material-ui/core'
-import { red,grey } from '@material-ui/core/colors';
+import {Container, createMuiTheme,ThemeProvider} from '@material-ui/core'
+import { red,grey,purple } from '@material-ui/core/colors';
+
+import {Routes,Route} from 'react-router-dom'
+import Create from './pages/Create';
+import Notes from './pages/Notes';
 
 const theme= createMuiTheme({
   palette:{
     primary:{
       main:'#a0abah'
     },
-    secondary:grey
+    secondary:purple
   }
 })
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-     <Home/> 
+        <Container>
+      <Routes>
+        <Route path='/create' element={<Notes/> } />
+        <Route path='/' element={<Create/> } />
+      </Routes>
+        </Container>
+     
     </ThemeProvider>
   );
 }
